@@ -1,12 +1,12 @@
 from datetime import datetime, date
 
 class Pessoa:
-    def __init__(self, nome, data_nascimento,cpf,cidade, salario=1300,  trabalhando=True,estudando=True, dirigindo=True): #int começa o objeto # self se cria
+    def __init__(self, nome, data_nascimento,cpf,cidade, salario=0,  trabalhando=True,estudando=True, dirigindo=True): #int começa o objeto # self se cria
         self.__nome = nome
         self.__data_nascimento = data_nascimento
         self.__cpf = cpf
         self._dirigindo = dirigindo
-        self.__cidade = cidade
+        self._cidade = cidade
         self._estudando = estudando
         self._trabalhando = trabalhando
         self._salario = salario
@@ -21,7 +21,7 @@ class Pessoa:
         return self.__cpf
 
     def get_cidade(self):
-        return self.__cidade
+        return self._cidade
 
     def get_salario(self):
         return self._salario
